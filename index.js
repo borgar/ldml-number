@@ -1,1 +1,1 @@
-module.exports = require( './src/ldmlnum' );
+module.exports = require( './lib/ldmlnum' );

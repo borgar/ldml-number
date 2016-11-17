@@ -1,5 +1,5 @@
 const tape = require( 'tape' );
-const numfmt = require( '../' );
+const numfmt = require( '../src/ldmlnum' );
 
 
 function format ( num, str, locale ) {
