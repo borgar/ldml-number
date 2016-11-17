@@ -20,10 +20,15 @@ tape( 'basic funtionality', t => {
   t.equal( numfmt.round( 1.5 ), 2, 'round function works' );
 
   t.equal( typeof numfmt.locale, 'function', 'has a locale function' );
-  const dummyLocale = { thousands_separator: 'a', decimal_separator: 'b',
-                        positive_sign: 'c', negative_sign: 'd',
-                        exponent_symbol: 'e', infinity_symbol: 'f',
-                        nan_symbol: 'g' };
+  const dummyLocale = {
+    thousands_separator: 'a',
+    decimal_separator: 'b',
+    positive_sign: 'c',
+    negative_sign: 'd',
+    exponent_symbol: 'e',
+    infinity_symbol: 'f',
+    nan_symbol: 'g'
+  };
   t.deepEqual( numfmt.locale( 'a', 'b', 'c', 'd', 'e', 'f', 'g' ), dummyLocale, 'locale function works' );
   t.equal( typeof numfmt.locale.en, 'object', 'english defaults are there' );
 
