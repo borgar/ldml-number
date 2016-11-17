@@ -1,6 +1,6 @@
 {
   "name": "ldml-number",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Formats numbers using the Unicode formatting standard, LDML.",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,7 @@
   "author": "Borgar Þorsteinsson <borgar@borgar.net> (http://borgar.net/)",
   "license": "MIT",
   "devDependencies": {
-    "tape": "~4.6.2"
-  },
-  "dependencies": {
+    "tape": "~4.6.2",
     "babel": "^6.5.2",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
