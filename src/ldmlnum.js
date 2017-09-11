@@ -212,8 +212,5 @@ function numfmt ( pattern, locale = 'en' ) {
 // export the interface
 numfmt.round = roundhalfeven;
 numfmt.locale = makelocale;
-numfmt.locale.en = makelocale();
-numfmt.locale.is = makelocale( '.', ',' );
-numfmt.locale.sv = makelocale( '.', ',' );
 
 module.exports = numfmt;
