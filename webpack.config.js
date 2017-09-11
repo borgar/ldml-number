@@ -1,15 +1,13 @@
-// var mod = require('./package.json');
 const path = require( 'path' );
 const webpack = require( 'webpack' );
 
-const env = process.env.WEBPACK_ENV;
 const plugins = [];
-let ext = '.js';
+let ext = '';
 
-if ( env === 'min' ) {
+if ( process.env.WEBPACK_ENV === 'min' ) {
   const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
   plugins.push( new UglifyJsPlugin({ 'minimize': true }) );
-  ext = '.min.js';
+  ext = '.min';
 }
 
 module.exports = {
@@ -17,7 +15,7 @@ module.exports = {
   'devtool': 'source-map',
   'output': {
     'path': path.resolve( './lib' ),
-    'filename': 'ldmlnum' + ext,
+    'filename': 'ldmlnum' + ext + '.js',
     'library': 'ldmlnum',
     'libraryTarget': 'umd',
     'umdNamedDefine': true
@@ -33,11 +31,6 @@ module.exports = {
           'presets': ['es2015'],
           'plugins': ['babel-plugin-add-module-exports']
         }
-      },
-      {
-        'test': /\.js$/,
-        'loader': 'eslint-loader',
-        'exclude': /node_modules/
       }
     ]
   },

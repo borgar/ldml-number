@@ -4,7 +4,8 @@
   "description": "Formats numbers using the Unicode formatting standard, LDML.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*-test.js && eslint index.js src"
+    "test": "tape test/*-test.js && eslint index.js src",
+    "build": "npm run test && webpack && WEBPACK_ENV=min webpack"
   },
   "keywords": [
     "ldml",
